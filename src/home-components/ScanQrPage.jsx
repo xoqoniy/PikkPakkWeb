@@ -1,7 +1,7 @@
 // src/ScanQrPage.jsx
 import React, { useState } from 'react';
 import { Scanner } from '@yudiel/react-qr-scanner';
-
+import ArrowIcon from '../assets/images/arrow_forward.svg'; 
 const ScanQrPage = ({ onBack, onScannedEmail }) => {
   const [localError, setLocalError] = useState('');
 
@@ -21,8 +21,13 @@ const ScanQrPage = ({ onBack, onScannedEmail }) => {
   return (
     <div className="page pin-page">
       <div className="pin-header">
-        <button className="topup-back" onClick={onBack}>
-          ←
+  {/* new back button */}
+        <button className="scan-back-btn" onClick={onBack}>
+          <img
+            src={ArrowIcon}
+            alt="Back"
+            className="scan-back-icon"
+          />
         </button>
         <h2>Scan QR</h2>
         <p className="pin-subtitle">

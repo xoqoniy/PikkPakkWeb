@@ -392,3 +392,35 @@
 .tx-loading-text {
   font-size: 16px;
 }
+
+
+.pin-header {
+  position: relative;
+  text-align: center;
+  padding: 32px 16px 16px;
+}
+
+/* circular back button in top-left, Figma style */
+.scan-back-btn {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: none;
+  background: #25cb5f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* arrow icon inside – reuse arrow_forward.svg but flip it */
+.scan-back-icon {
+  width: 18px;
+  height: 18px;
+  transform: rotate(180deg); /* makes it a "back" arrow */
+}
