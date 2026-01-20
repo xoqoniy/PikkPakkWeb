@@ -1,0 +1,394 @@
+/* =========================================================
+   OPERATIONS SCREENS: TOP-UP, SEND, RECEIVE, CONVERT
+   ======================================================= */
+
+/* Base layout for these pages */
+.topup-page,
+.send-page,
+.receive-page {
+  align-items: stretch;
+  background: #f3f4f6;
+  padding-bottom: 72px; /* leave room for bottom nav */
+}
+
+/* ---------- SHARED HEADERS (green top block) ---------- */
+
+.topup-header,
+.receive-header,
+.send-header {
+  background: #54b948;
+  padding: 14px 18px 26px;
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+}
+
+.topup-back {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.topup-title-area,
+.send-title-area {
+  flex: 1;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.topup-title {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* ---------- TOP-UP / CONVERT AMOUNT BLOCK ---------- */
+
+.topup-amount-main {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.topup-amount-sub {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.topup-account-pill {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 11px;
+}
+
+/* ---------- NUMERIC KEYPAD (Top-up & Convert) ---------- */
+
+.topup-keypad {
+  width: 90%;
+  max-width: 380px;
+  margin: 24px auto 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Key buttons reused from PIN layout */
+.pin-key {
+  height: 70px;
+  border-radius: 22px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+  font-size: 22px;
+  font-weight: 500;
+  color: #54b948;
+  cursor: pointer;
+}
+
+.pin-key-empty {
+  visibility: hidden;
+}
+
+.pin-key-back {
+  font-size: 18px;
+}
+
+/* Top-up / Convert action button */
+.topup-btn {
+  width: 80%;
+  max-width: 360px;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+/* ---------- SEND PAGE ---------- */
+
+.send-page {
+  /* inherits background + padding from base at top */
+}
+
+.send-balance {
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+/* Card with inputs on send screen */
+.send-card {
+  margin: 18px 18px 0;
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 16px 16px 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Reuse shared “pill” input look */
+.send-card .home-input {
+  width: 100%;
+  border-radius: 999px;
+  border: none;
+  background: #f2f3f5;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Adjust primary button inside the send card */
+.send-card .home-action-btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* ---------- RECEIVE PAGE ---------- */
+
+.receive-subtitle {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+/* QR area block */
+.receive-qr-box {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.receive-qr-placeholder {
+  width: 220px;
+  height: 220px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+}
+
+/* "Or copy address" text */
+.receive-or {
+  margin-top: 26px;
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Address pill + copy button */
+.receive-address-row {
+  margin: 10px 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.receive-address-pill {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #f2f3f5;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.receive-copy-btn {
+  border-radius: 999px;
+  border: none;
+  background: #54b948;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+/* ---------- SHARED MESSAGE TEXT ---------- */
+
+.home-action-message {
+  margin-top: 6px;
+  margin-inline: 18px;
+  font-size: 13px;
+  color: #333;
+  text-align: center;
+}
+/* ============ TRANSACTION RECEIPT PAGE ============ */
+
+.tx-page {
+  background: #f3f4f6;
+  align-items: stretch;
+  padding-bottom: 72px; /* space for bottom nav */
+}
+
+/* Green header at the top */
+.tx-header {
+  background: #54b948;
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+
+  /* more height so the card can sit lower and leave visible space for title/back */
+  padding: 18px 18px 110px;
+
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tx-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* main white card */
+
+.tx-card {
+  background: #ffffff;
+  border-radius: 26px;
+
+  /* only slightly overlap the green header now,
+     and give more bottom margin so it's visually lower */
+  margin: -15px 12px 40px;
+
+  padding: 18px 18px 20px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+
+  /* wider card – almost full width of the phone */
+  width: calc(100% - 24px);
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tx-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.tx-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: #ffe08a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.tx-recipient-block {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.tx-recipient-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tx-recipient-email {
+  font-size: 12px;
+  color: #777;
+}
+
+.tx-amount-block {
+  text-align: right;
+}
+
+.tx-amount-main {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* rows */
+
+.tx-row {
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+}
+
+.tx-row-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 2px;
+}
+
+.tx-row-value {
+  font-size: 13px;
+}
+
+.tx-status-ok {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.tx-status-fail {
+  color: #c62828;
+  font-weight: 600;
+}
+
+/* blockchain pill */
+
+.tx-blockchain-pill {
+  margin-top: 8px;
+  width: 100%;
+  border-radius: 999px;
+  border: none;
+  padding: 10px 16px;
+  background: #54b948;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tx-link-button {
+  border: none;
+  background: transparent;
+  color: #1a73e8;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+}
+
+/* Loading overlay for transactions */
+
+.tx-loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: #54b948;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.tx-loading-content {
+  text-align: center;
+  color: #fff;
+}
+
+.tx-loading-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.tx-loading-text {
+  font-size: 16px;
+}

@@ -1,0 +1,410 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f3f4f6;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.page {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 16px;
+}
+
+/* Header */
+
+.brand-header {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.logo-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #54b948;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.brand-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #54b948;
+}
+
+.powered-by {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #444;
+  font-style: italic;
+}
+
+/* Card */
+
+.auth-card {
+  width: 405px;
+  background: hwb(180 99% 0% / 0.992);
+  border-radius:12px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0);
+  padding: 24px 24px 20px;    /* was 24px 20px 20px – slightly more left/right */
+  margin-bottom: 24px;
+  overflow: hidden;           /* ensures children stay inside rounded corners */
+}
+
+
+.input-group {
+  margin-bottom: 12px;
+  position: relative;
+  padding: 0 4px;             /* tiny inset on left & right */
+}
+
+.auth-label {
+  font-size: 12px;
+  color: #777;
+  margin-left: 6px;
+  margin-bottom: 4px;
+}
+
+.auth-input {
+  width: 100%;
+  box-sizing: border-box;      /* important: width includes padding */
+  border-radius: 999px;
+  border: none;
+  background: #e7f0ff;        /* your light blue */
+  padding: 12px 16px;
+  font-size: 14px;
+  outline: none;
+}
+
+.password-group .auth-input {
+  padding-right: 44px;
+}
+
+.icon-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Checkboxes / small text */
+
+.auth-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.checkbox-row input {
+  width: 14px;
+  height: 14px;
+}
+
+.link-button {
+  border: none;
+  background: transparent;
+  color: #555;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Buttons */
+
+.btn-primary {
+  width: 100%;
+  border-radius: 999px;
+  border: none;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  background: #54b948;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.btn-secondary {
+  width: 100%;
+  border-radius: 999px;
+  border: none;
+  padding: 12px 16px;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  background: #e9eaec;
+  color: #222;
+  cursor: pointer;
+}
+
+/* Tip + bottom nav */
+
+.tip-card {
+  margin-top: 4px;
+  margin-bottom: 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 16px 14px;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+}
+
+.tip-icon {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #54b948;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  color: #333;
+}
+
+.bottom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.bottom-icon {
+  font-size: 18px;
+}
+
+/* --- PIN SCREEN --- */
+
+.pin-page {
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 48px;
+
+  /* make the PIN screen a bit wider than the default page */
+  width: 100%;
+  max-width: 520px;
+}
+
+.pin-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.pin-header h2 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.pin-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.pin-dots-box {
+  margin-bottom: 24px;
+  padding: 18px 26px 14px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  text-align: center;
+
+  /* widen the PIN box */
+  width: 80%;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pin-dots-label {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.pin-dots-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.pin-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #d9dde5;
+}
+
+.pin-dot.filled {
+  background: #545b6a;
+}
+
+.pin-error {
+  color: #c62828;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* keypad */
+
+.pin-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+
+  /* wider keypad */
+  width: 90%;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pin-key {
+  height: 70px;              /* a bit taller */
+  border-radius: 22px;       /* rounder keys */
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+  font-size: 22px;
+  font-weight: 500;
+  color: #54b948;
+  cursor: pointer;
+}
+
+.pin-key-empty {
+  visibility: hidden;
+}
+
+.pin-key-back {
+  font-size: 18px;
+}
+
+/* bottom button */
+
+.pin-forgot-btn {
+  width: 100%;
+  max-width: 320px;
+  margin-top: auto;
+}
+.freeze-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;           /* above everything */
+}
+
+.freeze-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px 20px;
+  width: 80%;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.freeze-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+/* src/css/App.css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #e5e7eb;
+}
+
+/* Center the phone “frame” */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* One “phone page” */
+
+.page {
+  width: 100%;
+  max-width: 420px;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 auto;
+  position: relative;
+}

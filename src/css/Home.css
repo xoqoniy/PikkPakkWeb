@@ -1,0 +1,558 @@
+/* ============ HOME PAGE ============ */
+
+.home-page {
+  background: #f3f4f6;
+  align-items: stretch;
+  padding: 0 0 72px; /* space for bottom nav */
+}
+
+/* Header & main card */
+
+.home-header {
+  background: #54b948;
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+  padding: 18px 18px 26px;
+}
+
+.home-balance-card {
+  background: #8fe680;
+  border-radius: 26px;
+  padding: 16px 18px 18px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.home-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.home-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #ffe08a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.home-welcome {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.home-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.home-icon-button {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.home-card-middle {
+  margin-bottom: 12px;
+}
+
+.home-basic-label {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.home-balance-main {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.home-balance-sub {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.home-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.home-wallet-label {
+  opacity: 0.8;
+}
+
+.home-wallet-value {
+  font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 12px;
+}
+
+/* Actions row */
+
+.home-actions-row {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.home-action {
+  flex: 1;
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.home-action-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #54b948;
+  font-size: 22px;
+}
+
+.home-action-label {
+  font-size: 12px;
+  gap: 10px;
+}
+
+/* Action panel */
+
+.home-action-panel {
+  margin-top: 16px;
+  margin-inline: 18px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 16px 16px 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.home-action-form h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.home-input {
+  width: 100%;
+  border-radius: 99px;
+  border: none;
+  background: #f2f3f5;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  outline:auto;
+}
+
+.home-action-btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.home-action-message {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #333;
+}
+
+.home-action-close {
+  margin-top: 8px;
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Info box */
+
+.home-info-box {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #f5f5f7;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+/* Reminder */
+
+.home-reminder-card {
+  margin: 16px 18px 8px;
+  padding: 10px 14px;
+  border-radius: 18px;
+  background: #8fe680;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-reminder-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #54b948;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-reminder-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.home-reminder-text {
+  font-size: 11px;
+}
+
+/* Sections */
+
+.home-section {
+  margin: 8px 18px;
+}
+
+.home-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.home-section-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.home-mini-link {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Quick transfer */
+
+.home-quick-row {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.home-quick-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+}
+
+.home-quick-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background: #ffe08a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.home-quick-name {
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+/* Transactions */
+
+.home-tx-card {
+  margin-top: 39px;
+  padding: 10px 12px;
+  border-radius: 18px;
+  background: #e8ffe1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-tx-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-tx-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-tx-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.home-tx-sub {
+  font-size: 11px;
+}
+
+.home-tx-amount {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Bottom nav */
+
+.home-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 420px;
+  width: 100%;
+  background: #54b948;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0 6px;
+  color: #ffffff;
+}
+
+.home-bottom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.home-bottom-item span:first-child {
+  font-size: 18px;
+}
+
+.home-bottom-item-active {
+  opacity: 1;
+}
+.home-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.home-qr-button {
+  border: none;
+  background: #54b948;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px; /* icon size */
+}
+.home-section {
+  margin: 8px 18px;
+}
+
+.home-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.home-section-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.home-mini-link {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Quick transfer row */
+
+.home-quick-row {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.home-quick-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+}
+
+.home-quick-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background: #ffe08a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.home-quick-name {
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+/* No transactions text */
+
+.home-no-tx {
+  font-size: 13px;
+  color: #555;
+  padding: 8px 0 16px;
+}
+.home-qr-overlay {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.home-qr-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 16px;
+  width: 90%;
+  max-width: 360px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+.home-qr-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.home-qr-close {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.home-qr-result {
+  margin-top: 8px;
+  font-size: 12px;
+  word-break: break-all;
+}
+.home-no-tx {
+  font-size: 13px;
+  color: #666;
+}
+
+.home-tx-amount-in {
+  color: #16a34a; /* green */
+}
+
+.home-tx-amount-out {
+  color: #dc2626; /* red */
+}
+/* ---------- BOTTOM NAV: layout ---------- */
+
+.home-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 420px;
+  width: 100%;
+  height: 56px;
+  background: #54b948;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 8px;
+  color: #ffffff;
+  border-radius: 18px 18px 0 0;
+}
+
+/* remove button “card” look */
+.home-bottom-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;              /* space between icon + text */
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.6;
+}
+
+.home-bottom-item span {
+  font-size: 11px;
+}
+
+/* active tab just gets higher opacity, no big white box */
+.home-bottom-item-active {
+  opacity: 1;
+}
+
+/* kill default focus outline / blue halo */
+.home-bottom-item:focus {
+  outline: none;
+}
+
+/* ---------- SVG icon sizing ---------- */
+
+.home-bottom-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+

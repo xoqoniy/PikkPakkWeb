@@ -1,0 +1,26 @@
+.splash-container {
+  display: flex; /* establish flex container */
+  flex-direction: column; /* line items up top to bottom */
+  justify-content: center; /* centers content vertically (main axis) */
+  align-items: center; /* centers content horizontally (cross axis) */
+  height: 100vh; /* vital to fill the full viewport height */
+  width: 100vw;
+  background-color: #54B948;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* If you want the logo specifically in the dead center regardless of footer */
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* dead center vertically */
+  align-items: center; /* dead center horizontally */
+  flex-grow: 1; /* pushes footer to the bottom */
+}
+
+.splash-logo {
+  width: 120px;
+  height: auto;
+  /* margin: auto; can also be used as a shortcut in flex */
+}
