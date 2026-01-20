@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://localhost:7219', // no trailing slash is fine
+  baseURL: 'https://pikkpakk.onrender.com', 
 });
 
 // Attach JWT to every request if it exists
